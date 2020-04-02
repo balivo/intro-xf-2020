@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BuscaCep.Mobile.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackLayout>
+        <Entry x:Name="txtCep" />
+        <Button Clicked="Button_Clicked" Text="Buscar" />
+        <Label FontAttributes="Bold" Text="Logradouro" />
+        <Label x:Name="txtLogradouro" />
+        <Label FontAttributes="Bold" Text="Complemento" />
+        <Label x:Name="txtComplemento" />
+        <Label FontAttributes="Bold" Text="Bairro" />
+        <Label x:Name="txtBairro" />
+        <Label FontAttributes="Bold" Text="Localidade" />
+        <Label x:Name="txtLocalidade" />
+        <Label FontAttributes="Bold" Text="UF" />
+        <Label x:Name="txtUF" />
+    </StackLayout>
+
+</ContentPage>
