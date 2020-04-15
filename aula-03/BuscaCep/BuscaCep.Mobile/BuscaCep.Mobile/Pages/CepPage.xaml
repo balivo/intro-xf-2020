@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BuscaCep.Mobile.Pages.CepPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Cep}"
+    mc:Ignorable="d">
+
+    <StackLayout Padding="5,0" Spacing="5">
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="Logradouro" />
+            <Label x:Name="txtCep" Text="{Binding Cep}" />
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="Logradouro" />
+            <Label x:Name="txtLogradouro" Text="{Binding Logradouro}" />
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="Complemento" />
+            <Label x:Name="txtComplemento" Text="{Binding Complemento}" />
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="Bairro" />
+            <Label x:Name="txtBairro" Text="{Binding Bairro}" />
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="Localidade" />
+            <Label x:Name="txtLocalidade" Text="{Binding Localidade}" />
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding HasCep}" Spacing="2">
+            <Label FontAttributes="Bold" Text="UF" />
+            <Label x:Name="txtUF" Text="{Binding UF}" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

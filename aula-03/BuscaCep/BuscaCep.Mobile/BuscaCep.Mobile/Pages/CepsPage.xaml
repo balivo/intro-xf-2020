@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BuscaCep.Mobile.Pages.CepsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BuscaCep.Mobile.ViewModels"
+    Title="Ceps"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:CepsViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid
+        Margin="0"
+        Padding="5,0"
+        ColumnSpacing="0"
+        RowSpacing="5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Entry
+            Grid.Row="0"
+            Keyboard="Numeric"
+            Placeholder="Informe o CEP"
+            Text="{Binding CEP}" />
+
+        <Button
+            Grid.Row="1"
+            Command="{Binding BuscarCommand}"
+            Text="Buscar" />
+
+        <ListView
+            x:Name="MyListView"
+            Grid.Row="2"
+            CachingStrategy="RecycleElement"
+            ItemTapped="Handle_ItemTapped"
+            ItemsSource="{Binding Ceps}">
+
+            <!--  Built in Cells  -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Detalhes}" Text="{Binding cep}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <!--  Custom View Cells  -->
+            <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}"
+                   d:Text="{Binding .}"
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}"
+                   d:Text="Detail"
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+            -->
+        </ListView>
+
+    </Grid>
+
+</ContentPage>
