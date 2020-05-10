@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShellPresentation.Views.InfoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="{Binding Name}" />
+            <Label Text="{Binding Age}" />
+            <Button
+                Command="{Binding FinalCommand}"
+                Text="FinalOne" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
