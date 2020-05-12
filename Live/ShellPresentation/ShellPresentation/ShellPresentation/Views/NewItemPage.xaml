@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ShellPresentation.Views.NewItemPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="New Item"
+    Shell.NavBarIsVisible="True"
+    Shell.PresentationMode="ModalAnimated"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <StackLayout
+            Padding="15"
+            Spacing="20">
+            <Label
+                FontSize="Medium"
+                Text="Text" />
+            <Entry
+                FontSize="Small"
+                Placeholder="Item name"
+                Text="{Binding ItemName}" />
+            <Label
+                FontSize="Medium"
+                Text="Description" />
+            <Editor
+                Margin="0"
+                FontSize="Small"
+                Placeholder="Item description"
+                Text="{Binding ItemDescription}" />
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal">
+                <Button
+                    Command="{Binding AddCommand}"
+                    Text="Add" />
+                <Button
+                    Command="{Binding CancelCommand}"
+                    Text="Cancel" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

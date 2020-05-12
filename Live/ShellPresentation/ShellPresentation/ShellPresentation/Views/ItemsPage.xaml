@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShellPresentation.Views.ItemsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="BrowseItemsPage"
+    Title="{Binding Title}"
+    mc:Ignorable="d">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding AddItemCommand}"
+            Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <RefreshView
+        Command="{Binding LoadItemsCommand}"
+        IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView
+            x:Name="ItemsCollectionView"
+            ItemsSource="{Binding Items}">
+            <d:CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label
+                            d:Text="{Binding .}"
+                            FontSize="16"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemTextStyle}"
+                            Text="{Binding Text}" />
+                        <Label
+                            d:Text="Item descripton"
+                            FontSize="13"
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            Text="{Binding Description}" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Tapped="OnItemSelected" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
