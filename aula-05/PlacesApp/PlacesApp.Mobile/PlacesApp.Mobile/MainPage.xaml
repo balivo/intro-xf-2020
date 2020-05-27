@@ -1,16 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="PlacesApp.Mobile.MainPage">
+<ContentPage
+    x:Class="PlacesApp.Mobile.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="0,50,0,0"
+    mc:Ignorable="d">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Margin="26,0">
+        <Frame
+            Padding="0"
+            CornerRadius="10"
+            HeightRequest="250">
+            <Grid>
+                <Image Aspect="AspectFill" Source="https://lorempixel.com/640/480/" />
+                <BoxView
+                    Margin="0,16,16,0"
+                    BackgroundColor="Red"
+                    CornerRadius="10"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    WidthRequest="20" />
+            </Grid>
+        </Frame>
+
+        <Grid ColumnSpacing="20" HeightRequest="80">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Ocen at Algarve" />
+                <Label LineBreakMode="TailTruncation" Text="Enjoy view over sky blue ocean from your room" />
+            </StackLayout>
+
+            <Frame
+                Grid.Column="1"
+                Padding="0"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                WidthRequest="10">
+                <StackLayout Spacing="0" VerticalOptions="Center">
+                    <Label HorizontalTextAlignment="Center" Text="18" />
+                    <Label HorizontalTextAlignment="Center" Text="Aug" />
+                </StackLayout>
+            </Frame>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
