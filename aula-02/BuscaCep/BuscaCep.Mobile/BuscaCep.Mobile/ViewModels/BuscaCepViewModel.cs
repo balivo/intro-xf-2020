@@ -54,10 +54,9 @@ namespace BuscaCep.Mobile.ViewModels
         //    }
         //}
         public Command BuscarCommand
-            => _BuscarCommand
-            ?? (_BuscarCommand = new Command(
+            => _BuscarCommand ??= new Command(
                 async () => await BuscarCommandExecute(),
-                () => BuscarCommandCanExecute()));
+                () => BuscarCommandCanExecute());
 
         private bool BuscarCommandCanExecute()
             => !string.IsNullOrWhiteSpace(CEP)

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="PlacesApp.Mobile.Sections.Locations.LocationItemView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.Content>
+
+        <StackLayout Padding="20,10">
+
+            <pancakeview:PancakeView CornerRadius="15" IsClippedToBounds="True">
+
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="200"
+                    Source="{Binding Imagem}" />
+
+            </pancakeview:PancakeView>
+
+            <StackLayout Orientation="Horizontal">
+
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="2">
+
+                    <Label
+                        Margin="0"
+                        Padding="0"
+                        FontSize="Subtitle"
+                        LineBreakMode="TailTruncation"
+                        Text="{Binding Nome}"
+                        TextColor="Black" />
+
+                    <Label
+                        Margin="0"
+                        Padding="0"
+                        FontSize="Caption"
+                        LineBreakMode="TailTruncation"
+                        MaxLines="2"
+                        Text="{Binding Descricao}" />
+
+                </StackLayout>
+
+                <pancakeview:PancakeView
+                    Padding="0,0,0,2"
+                    BackgroundColor="Gray"
+                    CornerRadius="10"
+                    HorizontalOptions="End">
+
+                    <pancakeview:PancakeView
+                        BackgroundColor="#ffffff"
+                        CornerRadius="10"
+                        TranslationY="-1">
+
+                        <StackLayout Padding="10,0" Spacing="0">
+                            <Label Text="{Binding Data, StringFormat='{0:dd}'}" />
+                            <Label Text="{Binding Data, StringFormat='{0:MMM}'}" />
+                        </StackLayout>
+
+                    </pancakeview:PancakeView>
+
+                </pancakeview:PancakeView>
+
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>

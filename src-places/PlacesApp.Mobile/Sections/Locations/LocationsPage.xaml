@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PlacesApp.Mobile.Sections.Locations.LocationsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:locations="clr-namespace:PlacesApp.Mobile.Sections.Locations"
+    xmlns:views="clr-namespace:PlacesApp.Mobile.Views"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="Auto,Auto,*">
+
+            <views:NavigationBar Grid.Row="0" />
+
+            <ListView
+                x:Name="MyListView"
+                Grid.Row="2"
+                CachingStrategy="RecycleElement"
+                HasUnevenRows="True"
+                ItemTapped="Handle_ItemTapped"
+                ItemsSource="{Binding Locations}"
+                SeparatorColor="Transparent">
+                <!--  Custom View Cells  -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <locations:LocationItemView />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

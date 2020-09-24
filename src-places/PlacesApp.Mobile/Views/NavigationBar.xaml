@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="PlacesApp.Mobile.Views.NavigationBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.Content>
+
+        <StackLayout
+            Grid.Row="0"
+            Margin="0"
+            Padding="10,5"
+            Orientation="Horizontal"
+            Spacing="5">
+
+            <Label
+                Margin="0"
+                Padding="0"
+                FontSize="Title"
+                HorizontalOptions="StartAndExpand"
+                Text="{Binding Title}"
+                TextColor="#000000"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="Center" />
+
+            <Grid
+                HeightRequest="50"
+                HorizontalOptions="End"
+                WidthRequest="50">
+
+                <pancakeview:PancakeView
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    WidthRequest="50">
+
+                    <Image
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Source="https://picsum.photos/id/237/50/50"
+                        VerticalOptions="Center"
+                        WidthRequest="50" />
+
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    BackgroundColor="LightBlue"
+                    CornerRadius="7.5"
+                    HeightRequest="15"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    WidthRequest="15" />
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>

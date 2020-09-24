@@ -1,9 +1,10 @@
-﻿using BuscaCep.Mobile.Pages;
+﻿using PlacesApp.Mobile.Sections.Locations;
+using PlacesApp.Mobile.Services.Navigation;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BuscaCep.Mobile
+namespace PlacesApp.Mobile
 {
     public partial class App : Application
     {
@@ -11,8 +12,7 @@ namespace BuscaCep.Mobile
         {
             InitializeComponent();
 
-            //MainPage = new MainPage();
-            MainPage = new BuscaCepPage();
+            NavigationService.Current.Initialize();
         }
 
         protected override void OnStart()
