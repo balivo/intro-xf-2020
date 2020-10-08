@@ -25,6 +25,7 @@ namespace PlacesApp.Mobile.Services.Navigation
         private void CreateViewModelMappings()
         {
             _Mappings.Add(typeof(LocationsPageViewModel), typeof(LocationsPage));
+            _Mappings.Add(typeof(LocationViewModel), typeof(LocationPage));
         }
 
         private Application CurrentApplication => Application.Current;

@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PlacesApp.Mobile.Sections.Locations.LocationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:views="clr-namespace:PlacesApp.Mobile.Views"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            ColumnSpacing="0"
+            RowDefinitions="*,*"
+            RowSpacing="0">
+
+            <Image
+                x:Name="PosterImage"
+                Grid.Row="0"
+                Aspect="AspectFill"
+                Source="{Binding Imagem}" />
+
+            <Grid
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="0"
+                Padding="0"
+                ColumnSpacing="0"
+                RowDefinitions="Auto,*"
+                RowSpacing="0">
+
+                <views:HasBackNavigationBar Grid.Row="0" />
+
+                <ScrollView Grid.Row="1">
+
+                    <Grid
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="0"
+                        RowDefinitions="Auto,*"
+                        RowSpacing="0">
+
+                        <StackLayout Grid.Row="0" HeightRequest="{Binding Source={x:Reference PosterImage}, Path=Height}" />
+
+                        <StackLayout
+                            Grid.Row="1"
+                            Margin="0"
+                            Padding="20,0"
+                            Spacing="20">
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                            <pancake:PancakeView
+                                Padding="0,0,0,2"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                TranslationY="-100"
+                                VerticalOptions="Start">
+
+                                <pancake:PancakeView
+                                    Padding="20,10"
+                                    BackgroundColor="#ffffff"
+                                    CornerRadius="10"
+                                    TranslationY="-1">
+
+                                    <Grid ColumnDefinitions="*,Auto,Auto,Auto,Auto,*" RowDefinitions="Auto,Auto,30,Auto,30,Auto">
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontAttributes="Bold"
+                                            FontSize="Subtitle"
+                                            LineBreakMode="TailTruncation"
+                                            Text="{Binding Nome}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="6"
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="Caption"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding Descricao}" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="1"
+                                            Text="Data" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="2"
+                                            Margin="0,0,10,0"
+                                            Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="#000000" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="3"
+                                            Margin="10,0,0,0"
+                                            Text="Duração" />
+
+                                        <Label
+                                            Grid.Row="3"
+                                            Grid.Column="4"
+                                            Text="6 dias"
+                                            TextColor="#000000" />
+
+                                    </Grid>
+
+                                </pancake:PancakeView>
+
+                            </pancake:PancakeView>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </ScrollView>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

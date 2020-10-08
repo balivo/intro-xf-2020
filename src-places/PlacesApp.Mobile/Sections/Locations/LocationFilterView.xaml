@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="PlacesApp.Mobile.Sections.Locations.LocationFilterView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+
+        <StackLayout CascadeInputTransparent="True" InputTransparent="False">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </StackLayout.GestureRecognizers>
+
+            <Label
+                x:Name="txtNome"
+                Margin="5,0"
+                FontSize="Small"
+                Text="Todos" />
+
+            <StackLayout
+                x:Name="containerSelectedIndicator"
+                BackgroundColor="Transparent"
+                HeightRequest="2"
+                VerticalOptions="End" />
+
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>

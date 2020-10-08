@@ -8,13 +8,63 @@
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
 
-        <Grid RowDefinitions="Auto,Auto,*">
+        <Grid
+            Margin="0"
+            Padding="0"
+            ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto"
+            ColumnSpacing="0"
+            RowDefinitions="Auto,Auto,2,*"
+            RowSpacing="0">
 
-            <views:NavigationBar Grid.Row="0" />
+            <views:NavigationBar
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="6" />
+
+            <locations:LocationFilterView
+                Grid.Row="1"
+                Grid.Column="0"
+                LocationFilter="Todos"
+                NormalColor="Transparent"
+                SelectedColor="#000000"
+                SelectedFilter="{Binding SelectedFilter}" />
+
+            <locations:LocationFilterView
+                Grid.Row="1"
+                Grid.Column="1"
+                LocationFilter="Destaques"
+                NormalColor="Transparent"
+                SelectedColor="#000000"
+                SelectedFilter="{Binding SelectedFilter}" />
+
+            <locations:LocationFilterView
+                Grid.Row="1"
+                Grid.Column="2"
+                LocationFilter="Populares"
+                NormalColor="Transparent"
+                SelectedColor="#000000"
+                SelectedFilter="{Binding SelectedFilter}" />
+
+            <locations:LocationFilterView
+                Grid.Row="1"
+                Grid.Column="3"
+                LocationFilter="Trending"
+                NormalColor="Transparent"
+                SelectedColor="#000000"
+                SelectedFilter="{Binding SelectedFilter}" />
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
+                Margin="0,1,0,0"
+                BackgroundColor="#33000000" />
 
             <ListView
                 x:Name="MyListView"
-                Grid.Row="2"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
                 CachingStrategy="RecycleElement"
                 HasUnevenRows="True"
                 ItemTapped="Handle_ItemTapped"

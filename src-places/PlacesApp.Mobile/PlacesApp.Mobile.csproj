@@ -24,7 +24,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Update="Sections\Locations\LocationFilterView.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Sections\Locations\LocationItemView.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Sections\Locations\LocationPage.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Sections\Locations\LocationsPage.xaml">
@@ -32,6 +38,9 @@
 		</EmbeddedResource>
 		<EmbeddedResource Update="Services\Navigation\CustomNavigationPage.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\HasBackNavigationBar.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Views\NavigationBar.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>

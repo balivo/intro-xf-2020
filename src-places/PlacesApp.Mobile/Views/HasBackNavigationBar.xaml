@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="PlacesApp.Mobile.Views.HasBackNavigationBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.Content>
+
+        <Grid
+            Margin="0"
+            Padding="10,5"
+            ColumnDefinitions="*,Auto">
+
+            <Label
+                Grid.Column="0"
+                Text="Voltar"
+                TextColor="#ffffff"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoBackCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Grid
+                Grid.Column="1"
+                HeightRequest="50"
+                HorizontalOptions="End"
+                WidthRequest="50">
+
+                <pancakeview:PancakeView
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    WidthRequest="50">
+
+                    <Image
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Source="https://picsum.photos/id/237/50/50"
+                        VerticalOptions="Center"
+                        WidthRequest="50" />
+
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    BackgroundColor="LightBlue"
+                    CornerRadius="7.5"
+                    HeightRequest="15"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    WidthRequest="15" />
+
+            </Grid>
+
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>
